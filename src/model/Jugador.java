@@ -32,3 +32,6 @@ public class Jugador extends Persona implements IDesplazarseEnPistaConPalo {
         System.out.println("Jugador número " + this.numero + " se la pasa a Jugador " + receptor.getNumero());
     }
 }
+
+
+//hola profe como estas casi no puedo y no pude :/

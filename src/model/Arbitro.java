@@ -1,11 +1,12 @@
 package model;
 
-public Arbitro implements Persona extends IDesplazarseEnPistaSinPalo {
+public class Arbitro extends Persona {
     public Arbitro(String nombre, int edad) {
-        super(nombre, edad);
-    }
+    super(nombre, edad);
+}
 
-    public String desplazarse() {
-        return nombre + " se desplaza en la pista como árbitro.";
+    @Override
+    public void desplazarse() {
+        System.out.println(getNombre() + " se desplaza como árbitro en la pista.");
     }
 }

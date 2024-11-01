@@ -1,8 +1,8 @@
 package model;
 
-public  Persona {
-     String nombre;
-     int edad;
+public abstract class Persona {
+    protected String nombre;
+    protected int edad;
 
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
@@ -24,5 +24,7 @@ public  Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+    
+    public abstract void desplazarse();
 
 }

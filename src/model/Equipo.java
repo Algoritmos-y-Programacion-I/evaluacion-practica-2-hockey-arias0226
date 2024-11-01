@@ -1,20 +1,23 @@
 package model;
 
 public class Equipo {
+    private String nombre;
+    private JugadorHockey[] jugadores;
+    private int contadorJugadores;
 
-    private final int CANTIDAD_JUGADORES = 6;
-
-    protected String nombreEquipo;
-
-    private JugadorHockey[] jugadores = new JugadorHockey[CANTIDAD_JUGADORES];
-
-    public void agregarJugador(JugadorHockey jugador, int posicion) {
-        if (posicion >= 0 && posicion < jugadores.length) {
-            jugadores[posicion] = jugador;
-        }
+    public Equipo(String nombre) {
+        this.nombre = nombre;
+        this.jugadores = new JugadorHockey[5];
+        this.contadorJugadores = 0;
     }
 
-    public JugadorHockey[] getJugadores() {
-        return jugadores;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void agregarJugador(JugadorHockey jugador) {
+        if (contadorJugadores < jugadores.length) {
+            jugadores[contadorJugadores++] = jugador;
+        }
     }
 }
